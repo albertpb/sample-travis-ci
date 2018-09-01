@@ -1,0 +1,13 @@
+{
+  "name": "sample-travis-ci",
+  "version": "1.0.0",
+  "description": "Travis ci node.js on Docker",
+  "author": "Alberto Palumbo <palumbo.alb@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
