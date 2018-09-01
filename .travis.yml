@@ -1,25 +1,23 @@
-
 language: node_js
-
 node_js:
-  - "8"
-
+- '8'
 sudo: required
-
 services:
-  - docker
-
+- docker
 after_deploy:
-  - echo "done deploying"
-
+- echo "done deploying"
 deploy:
   provider: elasticbeanstalk
-  access_key_id: $ACCESSKEYID
+  access_key_id: "$ACCESSKEYID"
   secret_access_key:
     secure: "$SECRETACCESSKEY"
-  region: "us-west-2"
-  app: "sample-travis-ci"
-  env: "sample-travis-ci-dev"
-  bucket_name: "sample-travis-ci-dev.us-west-2.elasticbeanstalk.com"
+  region: us-west-2
+  app: sample-travis-ci
+  env: sample-travis-ci-dev
+  bucket_name: sample-travis-ci-dev.us-west-2.elasticbeanstalk.com
   on:
     branch: master
+env:
+  global:
+  - secure: nYWolIKJcg49oKYirwmVy1eoBZAROG5cSZraXSl2DAmazw9EGPj74IT1I/cO3sz7rvzJhayRxUNm4h8GW76a3dBAkkHZ7FtD+ceWCa9nlXXTeuMZpX50VlKkBBIAOwNoX90qymSOEusk4cfbqhHiDwGH6laoQfdzGQNBLLsECJpeV0KHjdfUZ/RbNi/vrvae8EfZrzzttSWGPoABp9OXPDE5A3LrwBQfDrMsLMjkpFo4w2l+tKO6ggXi/dAM0ejt5aiu2Ba0SYqLG2KWSTD0RUSgezB7Cl4QH9tKhztu1HlEfbS+Ol2iCSHNpaYHvFvRlknz6kBDBCCoxDyMtaO9/5mHW9YBtaPb11ofekYlBac6O/cj77Alq9FW8Q6dZ7ssSO5owARbE2rnL0aHA3ZmHvoTRszktnUFqtxTZ+k+SyzTe6tUbELVharyYrWQ4XBWHfkesaB824i1FMLad+ch0Ik/x3tYHsUa4Xi1hvIR9MBU+j+8wMOyMiIrBS/JI2h7zTBbliC38B4a8HUyFkRN47QSthlCsyprp2yisxcsuUzMwsRNhcs5sRUlT3Jw8wqU3p8IikeecJzJ0wJxn1lp53nwCoh0gUcEX524JUSWTUA2yI77LZFw88LpdWR3FM05p+CagHZ+QWCQ2z5qAztE3bAcSLU3sM6wZb7kdVCItgQ=
+  - secure: m9fG6n8tCAKQV2DgGGz/+ul2sGNOCeSvol/PBBN9hQSaJSGLL1yFX4k1L1O5gPhXHUIIQ4HCv5Nn2AaIbVwrE6KMlzduOa9rAsbVVE7y94HY0+4bN5PdzrI3xIeZSFiaQwineEBLiXejbzSpfnc+9fDtikDdYEWhLup5sv02oTtj1ohHdlaH5OIXDHLejlByoX/Lb6PVagMRxLSHLAKhzsnlugro8fKKutJH3EVZW4+aOZnqEZ8B9RZdWBDr6UBGcqMQxV481oAWqOhcd+4ZX9Z1kcT1/c5HzKnYWihjYIsEe8UImJPZ++ywvFR49wfz7ESq1MOQZ5CTmyqa2RJSwIS1ZcOR7MLs/kEMe2klTgl3SuahppQ73g7Lm6HLinUV2EhHLWYOeFPtKBxTCZkOzQBSWyc5961oRJma70evakNLU5jhrnIlklBR9hX+JlFf4asD2pl6DnBCplxWOaX9gXNkqGsQLCS9rDimoOsJuZiWr8MNUMOzEERO1GcPt9tkP7BJuqAuVxkXuQ1NzpEoJyQs5R5g862i64quS18fJROhINwnByKxi+/X3McSYFTwtj4vLr3dSAPJMhp6bSh/tM7fLV/6dZt1EPxXcpLG0mDeP/96DriZ1v08SnFhmDl//cCZ022tFG6sfdGvwYKny0Zmftw4GGFGHbK81NJL9eA=
