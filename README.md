@@ -1,1 +1,1 @@
-"# sample-travis-ci" 
+# sample-travis-ci
